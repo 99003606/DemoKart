@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace DemoKartBL
 {
+    
     public class Product
     {
+        List<Category> Cst = new List<Category>();
+
     }
 }
