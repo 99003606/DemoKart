@@ -8,8 +8,7 @@ namespace DemoKartBL
 {
     public class Cart
     {
-        //Delete this method before submission
-        //Method was created to generate test project
+       
         public int Product_id;
         public String Product_name;
         public int Product_qty;
