@@ -1,23 +1,30 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DemoKart
+namespace DemoKartBL
 {
     public class User
     {
+        public String firstName { get; set; }
+        public String lastName { get; set; }
+        public DateTime Dob { get; set; }
+        public int mobileNo { get; set; }
 
-        public String Username { get; set; }
-        public String Password { get; set; }
-
-        public User(String admin, String password)
+        public int Login(String UserName, String Password)
         {
-            Username = admin;
-            Password = admin;
-
+            if (UserName == "User" && Password == "pass")
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
         }
 
     }
 }
+
