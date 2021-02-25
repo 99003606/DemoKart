@@ -8,5 +8,6 @@ namespace DemoKartBL
 {
     public class Payment
     {
+
     }
 }

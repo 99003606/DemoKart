@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DemoKartBL;
 
 namespace DemoKart
 {
@@ -10,6 +11,10 @@ namespace DemoKart
     {
         static void Main(string[] args)
         {
+           
+            List<Product> PList = new List<Product>();
+            
+
             Console.Write("Enter the Username: ");
             String Username = Console.ReadLine();
             Console.Write("Enter the Password: ");
@@ -18,12 +23,15 @@ namespace DemoKart
             if (a.Username == "admin" && a.Password == "admin")
             {
                 Console.WriteLine("login sucessful");
+                Console.WriteLine("Select Category");
+               
+
+                Console.WriteLine("select the payment mode \n 1.cash \n 2.Card");
+
+
+
+
             }
-            Console.WriteLine("select the payment mode \n 1.cash \n 2.Card");
-
-
-
-
         }
     }
 }
