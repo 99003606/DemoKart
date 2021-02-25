@@ -11,31 +11,48 @@ namespace DemoKartBL
     {
 
         public static List<Product> PList = new List<Product>();
-        public int categoryid;
-        public string category_name;
-       public Category(int categoryid, string category_name)
+        public int categoryid { get; set; }
+        public String categoryname { get; set; }
+        public double totalCost = 0;
+        public Category(int categoryid, string category_name)
         {
             this.categoryid = categoryid;
             this.category_name = category_name;
         }
 
-        PList.Add(new Product(1,"Electronics","TV", 1, 2, 20000 );
-        PList.Add(new Product(1,"Electronics","Refrigerator", 2, 2, 20000 );
-        PList.Add(new Product(1,"Electronics","Mobile", 3, 2, 10000 );
-        PList.Add(new Product(1,"Electronics","Washing Machine", 4, 2, 20000 );
-        PList.Add(new Product(2,"Grocery","Fruits", 5, 2, 100 );
-        PList.Add(new Product(2,"Grocery","Buiscuits", 6, 2, 50 );
-        PList.Add(new Product(2,"Grocery","Bread", 7, 2, 50 );
-        PList.Add(new Product(2,"Grocery","Chocolate", 8, 2, 100 );
-        PList.Add(new Product(3,"Clothes","Shirt", 9, 2, 500 );
+       public double CalculatePrice(int cat_gory, double cost,int Quantity)
+        {
+            if (cat_gory == 1)
+            {
+                cost = cost * Quantity;
+                totalCost = cost + (cost * 0.18);
+                return totalCost;
+            }
+            else if (cat_gory == 2)
+            {
+                cost = cost * Quantity;
+                totalCost = cost + ( cost * 0.04);
+                return totalCost;
+            }
+            else if (cat_gory == 3)
+            {
+                cost = cost * Quantity;
+                totalCost = cost + (cost * 0.07);
+                return totalCost;
+            }
+            else if (Cat_gory == 4)
+            {
+                cost = cost * Quantity;
+                totalCost = cost + (cost * 0.18);
+                return totalCost;
+            }
+            else
+            {
+                return 0;
+            }
+        }
 
-        PList.Add(new Product(3,"Clothes","Pant", 10, 2, 600 );
-        PList.Add(new Product(3,"Clothes","Tshirt", 11, 2, 500 );
-        PList.Add(new Product(3,"Clothes","Tie", 12, 2, 300 );
-        PList.Add(new Product(4,"Cosmetics","Cream", 13, 2, 50 );
-        PList.Add(new Product(4,"Cosmetics","Deodrant", 14, 2, 50 );
-        PList.Add(new Product(4,"Cosmetics","Facewash", 15, 2, 50 );
-        PList.Add(new Product(4,"Cosmetics","Lipstick", 16, 2, 50 );
+    }
        
 
 
