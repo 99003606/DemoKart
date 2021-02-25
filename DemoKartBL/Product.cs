@@ -17,7 +17,7 @@ namespace DemoKartBL
 
         public Product(int categoryid, String category_name, String Product_name, int Product_id, int Product_qty, decimal Product_price)
         {
-            category.category_id = categoryid;
+            category.categoryid = categoryid;
             category.categoryname - category_name;
             this.Product_name = Product_name;
             this.Product_id = Product_id;
